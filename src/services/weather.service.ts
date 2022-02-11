@@ -15,4 +15,5 @@ export default {
         const forecast: Array<HourForecast> = weatherFactory.formatRawForecastToHourForecast(rawWeatherForecast);
         return forecast;
     }
+
 }

@@ -1,4 +1,6 @@
-import { CurrentWeather, HourForecast } from "@/interfaces/weather.interface"
+import {CurrentWeather, HourForecast} from "@/interfaces/weather.interface"
+import {format} from 'date-fns'
+import forecastHelper from '../helpers/forecast.helper'
 
 export default {
     formatRawWeatherToWeather(rawWeather: Readonly<any>): CurrentWeather {
@@ -15,7 +17,7 @@ export default {
     },
     formatRawForecastToHourForecast(rawForecast: Readonly<any>): Array<HourForecast> {
         const hourForecast: Array<HourForecast> = rawForecast.hourly.map((hourlyForecast: Readonly<any>) => ({
-            hour: hourlyForecast.dt,
+            hour: forecastHelper.formatToDate(hourlyForecast.dt),
             temperature: hourlyForecast.temp,
             weather: {
                 name: hourlyForecast.weather[0].name,
@@ -24,5 +26,8 @@ export default {
             }
         }))
         return hourForecast;
-    }
+    },
+
+
+
 }
