@@ -1,21 +1,21 @@
 <template>
-  <ion-page>
-    <ion-tabs>
+  <ion-page class="ion-page">
+    <ion-tabs >
       <ion-router-outlet></ion-router-outlet>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="myPosition" href="/tabs/myPosition">
-          <ion-icon src="../../assets/icon/location.svg" />
-          <ion-label>Ma position</ion-label>
+      <ion-tab-bar slot="bottom" class="iontab"  >
+        <ion-tab-button class="ionButton" tab="myPosition" href="/tabs/myPosition">
+          <ion-icon class="newColor" src="../../assets/icon/location.svg" />
+          <ion-label class="newColor">Ma position</ion-label>
         </ion-tab-button>
           
         <ion-tab-button tab="searchWeather" href="/tabs/searchWeather">
-          <ion-icon src="../../assets/icon/search.svg" />
-          <ion-label>Recherche ville</ion-label>
+          <ion-icon class="newColor" src="../../assets/icon/search.svg" />
+          <ion-label class="newColor" >Recherche ville</ion-label>
         </ion-tab-button>
         
         <ion-tab-button tab="favoritesWeather" href="/tabs/favoritesWeather">
-          <ion-icon src="../../assets/icon/favorites-list.svg" />
-          <ion-label>Favoris</ion-label>
+          <ion-icon class="newColor" src="../../assets/icon/favorites-list.svg" />
+          <ion-label class="newColor">Favoris</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -37,3 +37,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.page{
+  --background: #22273f;
+}
+.newColor{
+color :#ffff;
+} 
+
+</style>

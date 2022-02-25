@@ -13,7 +13,7 @@
                     class="text-h5"
                     cols="6"
                 >
-                  {{ hourForecast.hour }}
+                  {{ hourForecast.hour }}H
                 </v-col>
               </v-row>
               <v-row>
@@ -27,7 +27,7 @@
               </v-row>
               <v-row>
                 <v-col>
-                  {{ hourForecast.temperature }}
+                  {{ hourForecast.temperature }}°C
                 </v-col>
               </v-row>
               <v-row>
@@ -63,6 +63,7 @@ export default {
 <style scoped>
 
 .custom-weather-hour-forecast-card{
+  overflow: scroll;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,7 +80,9 @@ export default {
   align-content: space-between;
   align-items: center;
   border-bottom: 1px solid white;
-  margin-bottom:10px;
+  margin: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 </style>

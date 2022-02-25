@@ -1,9 +1,9 @@
 <template>
   <div id="container">
-    <ion-card>
+    <ion-card class="weather-card">
       <ion-card-header>
         <ion-card-subtitle>{{ weather.city }}</ion-card-subtitle>
-        <ion-card-title>{{ temperatureWithoutDecimals }}</ion-card-title>
+        <ion-card-title>{{ temperatureWithoutDecimals }}° </ion-card-title>
       </ion-card-header>
       <ion-card-content class="custom-weather-card">
         <img
@@ -34,11 +34,6 @@ export default {
 <style scoped>
 #container {
   text-align: center;
-
-  left: 0;
-  right: 0;
-
-  transform: translateY(-50%);
 }
 
 #container strong {
@@ -61,5 +56,9 @@ export default {
   flex: 1;
   flex-direction: column;
   align-items: center;
+}
+.weather-card{
+  --background:#183b66;
+
 }
 </style>
